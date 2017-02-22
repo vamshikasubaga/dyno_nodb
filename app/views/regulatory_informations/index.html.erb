@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Regulatory Informations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nci</th>
+      <th>Fda regulated drug</th>
+      <th>Fda regulated device</th>
+      <th>Post prior to approval</th>
+      <th>Ped postmarket surv</th>
+      <th>Exported from us</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @regulatory_informations.each do |regulatory_information| %>
+      <tr>
+        <td><%= regulatory_information.nci_id %></td>
+        <td><%= regulatory_information.fda_regulated_drug %></td>
+        <td><%= regulatory_information.fda_regulated_device %></td>
+        <td><%= regulatory_information.post_prior_to_approval %></td>
+        <td><%= regulatory_information.ped_postmarket_surv %></td>
+        <td><%= regulatory_information.exported_from_us %></td>
+        <td><%= link_to 'Show', regulatory_information %></td>
+        <td><%= link_to 'Edit', edit_regulatory_information_path(regulatory_information) %></td>
+        <td><%= link_to 'Destroy', regulatory_information, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Regulatory Information', new_regulatory_information_path %>

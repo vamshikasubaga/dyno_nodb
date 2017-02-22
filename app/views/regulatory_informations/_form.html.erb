@@ -1,0 +1,47 @@
+<%= form_for(regulatory_information) do |f| %>
+  <% if regulatory_information.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(regulatory_information.errors.count, "error") %> prohibited this regulatory_information from being saved:</h2>
+
+      <ul>
+      <% regulatory_information.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nci_id %>
+    <%= f.text_field :nci_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :fda_regulated_drug %>
+    <%= f.text_field :fda_regulated_drug %>
+  </div>
+
+  <div class="field">
+    <%= f.label :fda_regulated_device %>
+    <%= f.text_field :fda_regulated_device %>
+  </div>
+
+  <div class="field">
+    <%= f.label :post_prior_to_approval %>
+    <%= f.text_field :post_prior_to_approval %>
+  </div>
+
+  <div class="field">
+    <%= f.label :ped_postmarket_surv %>
+    <%= f.text_field :ped_postmarket_surv %>
+  </div>
+
+  <div class="field">
+    <%= f.label :exported_from_us %>
+    <%= f.text_field :exported_from_us %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

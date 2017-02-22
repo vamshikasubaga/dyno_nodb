@@ -5,15 +5,16 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-item = MyModel.find(id: 1, name: "Hello Record")
-item.active = true
-item.save
-item.delete!
+# item = MyModel.find(id: 1, name: "Hello Record")
+# item.active = true
+# item.save
+# item.delete!
+#
+# MyModel.find(id: 1, name: "Hello Record") # => nil
+#
+# item = MyModel.new
+# item.id = 2
+# item.name = "Item"
+# item.active = false
+# item.save
 
-MyModel.find(id: 1, name: "Hello Record") # => nil
-
-item = MyModel.new
-item.id = 2
-item.name = "Item"
-item.active = false
-item.save
