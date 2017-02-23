@@ -1,3 +1,5 @@
+require "aws-sdk-core"
+
 class RegulatoryInformationsController < ApplicationController
   before_action :set_regulatory_information, only: [:show, :edit, :update, :destroy]
 
@@ -25,6 +27,18 @@ class RegulatoryInformationsController < ApplicationController
   # POST /regulatory_informations.json
   def create
     @regulatory_information = RegulatoryInformation.new(regulatory_information_params)
+
+    dynamodb = Aws::DynamoDB::Client.new
+
+    begin
+      result = dynamodb.create_table(@regulatory_information)
+      puts "Created table. Status: " +
+               result.table_description.table_status;
+
+    rescue  Aws::DynamoDB::Errors::ServiceError => error
+      puts "Unable to create table:"
+      puts "#{error.message}"
+    end
 
     respond_to do |format|
       if @regulatory_information.save

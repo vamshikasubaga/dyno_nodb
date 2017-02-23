@@ -101,3 +101,28 @@ app/controllers/regulatory_informations_controller.rb:17:in `new'
   Rendered /Users/kasubaghasridvr/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (56.8ms)
 Started POST "/__web_console/repl_sessions/86b3116c0eb7697da5763a2ff51d35e2/trace" for ::1 at 2017-02-22 16:49:22 -0500
 Started POST "/__web_console/repl_sessions/86b3116c0eb7697da5763a2ff51d35e2/trace" for ::1 at 2017-02-22 16:49:25 -0500
+Started GET "/" for ::1 at 2017-02-22 23:25:34 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /Users/kasubaghasridvr/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-5.0.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/kasubaghasridvr/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-5.0.1/lib/rails/templates/rails/welcome/index.html.erb (3.5ms)
+Completed 200 OK in 16ms (Views: 7.8ms)
+
+
+Started GET "/regulatory_informations/new" for ::1 at 2017-02-22 23:26:14 -0500
+Processing by RegulatoryInformationsController#new as HTML
+Completed 500 Internal Server Error in 8ms
+
+
+  
+NameError (uninitialized constant RegulatoryInformationsController::RegulatoryInformation):
+  
+app/controllers/regulatory_informations_controller.rb:17:in `new'
+  Rendering /Users/kasubaghasridvr/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/kasubaghasridvr/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/kasubaghasridvr/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.7ms)
+  Rendering /Users/kasubaghasridvr/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/kasubaghasridvr/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendering /Users/kasubaghasridvr/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/kasubaghasridvr/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/kasubaghasridvr/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (64.2ms)
